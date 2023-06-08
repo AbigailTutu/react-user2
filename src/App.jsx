@@ -13,28 +13,39 @@ import Users from "./Components/Users";
             {
                 name: "Bernice",
                 email: "bernice@gmail.com",
-                password: "577899"
+                password: "577899",
+                id: "567878"
             },
     
             {
               name: "Makafui",
               email: "makafui@gmail.com",
-              password: "098765"
+              password: "098765",
+              id: "5462788"
             },
     
             {
               name: "Elorm",
               email: "elorm@gmail.com",
-              password: "123456"
+              password: "123456",
+              id: "272789"
             },
           ]
         }
       }
 
       addNewUser = (user) => {
+        user.id = Math.random().toString()
          this.setState({
           users: [...this.state.users, user]
          })
+      }
+
+      deleteUser = (id) => {
+       let deletedUsers = this.state.users.filter(user => user.id !==id);
+       this.setState({
+        users: deletedUsers
+       })
       }
   render() {
     return (
@@ -45,7 +56,7 @@ import Users from "./Components/Users";
               <Form addUser={this.addNewUser}/>
             </Col>
             <Col>
-              <Users userData={this.state.users}/>
+              <Users userData={this.state.users} deleteUser={this.deleteUser}/>
             </Col>
           </Row>
         </Container>

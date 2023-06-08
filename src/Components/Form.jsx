@@ -48,7 +48,7 @@ class Form extends Component {
       <br></br>
       <br></br>
   
-      <button type="submit">Submit</button>
+      <button type="submit" className="button">Submit</button>
     </form>
       </div>
     )

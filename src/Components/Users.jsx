@@ -10,8 +10,8 @@ const Users = (props) => {
       <Container>
         <Row>
           {
-            props.userData.map((user, index) => {
-              return <User userInfo={user} key={index}/>
+            props.userData.map((user) => {
+              return <User userInfo={user} key={user.id} deleteUser={props.deleteUser}/>
             })
           }
         </Row>

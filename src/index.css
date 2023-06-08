@@ -73,15 +73,15 @@ body {
   color: white;
 }
 
-button {
+.button {
   width: 5.5rem;
   height: 2.5rem;
   border-radius: 0.5rem;
   border: transparent;
-  background-color: blue;
+  background-color: rgb(68, 4, 53);
 }
 
-button:hover {
+.button:hover {
   background-color: red;
 }
 
