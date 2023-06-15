@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 import React from "react";
-import {Container, Row} from "react-bootstrap"
+import { Container, Row } from "react-bootstrap";
 import User from "./User";
 
 const Users = (props) => {
@@ -9,11 +9,16 @@ const Users = (props) => {
     <div>
       <Container>
         <Row>
-          {
-            props.userData.map((user) => {
-              return <User userInfo={user} key={user.id} deleteUser={props.deleteUser}/>
-            })
-          }
+          {props.userData.map((user) => {
+            return (
+              <User
+                userInfo={user}
+                key={user.id}
+                deleteUser={props.deleteUser}
+                editUser={props.editUser}
+              />
+            );
+          })}
         </Row>
       </Container>
     </div>
